@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ferrari-red: #E32636;
+  --color-ferrari-dark: #8B0000;
+  --color-tech-black: #0A0A0A;
+  --color-tech-gray: #1A1A1A;
+  
+  --font-inter: "Inter", sans-serif;
+  --font-rajdhani: "Rajdhani", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-tech-black);
+    color: white;
+    font-family: var(--font-inter);
+    overflow: hidden; /* It's a presentation deck, we don't want generic scrolling */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-rajdhani);
+    text-transform: uppercase;
+  }
+}
+
+/* Subtle Grid Background Pattern */
+.bg-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Subtle scanlines overlay */
+.scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0,0,0,0.1) 50%,
+    rgba(0,0,0,0.1)
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
